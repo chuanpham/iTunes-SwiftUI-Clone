@@ -52,6 +52,7 @@
 		83FC80972DD20B19009137B3 /* TopBooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FC80962DD20B19009137B3 /* TopBooks.swift */; };
 		83FC809B2DD306FA009137B3 /* TopAudioBooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FC809A2DD306FA009137B3 /* TopAudioBooks.swift */; };
 		83FC80A02DD34C71009137B3 /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FC809F2DD34C71009137B3 /* SafariView.swift */; };
+		83FC80A32DD35248009137B3 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 83FC80A22DD35248009137B3 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -112,6 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83FC80A32DD35248009137B3 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +332,9 @@
 				Base,
 			);
 			mainGroup = 0ACCCFBF2B654B6A00EC2473;
+			packageReferences = (
+				83FC80A12DD35248009137B3 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 0ACCCFC92B654B6A00EC2473 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -602,6 +607,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		83FC80A12DD35248009137B3 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.3.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		83FC80A22DD35248009137B3 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 83FC80A12DD35248009137B3 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0ACCCFC02B654B6A00EC2473 /* Project object */;
 }

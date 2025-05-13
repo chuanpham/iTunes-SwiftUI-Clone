@@ -91,6 +91,9 @@ private struct TopSongsView: View {
                     }
                 }
                     .listStyle(.plain)
+                    .refreshable {
+                        topSongsVM.fetchTopSongs()
+                    }
             )
         case .error(let message):
             return AnyView(
@@ -475,9 +478,13 @@ private struct LoadingIndicator: View {
     var body: some View {
         VStack {
             Spacer().frame(height: 100)
-            ProgressView()
-                .progressViewStyle(.circular)
-                .frame(maxWidth: .infinity)
+            VStack {
+                ProgressView()
+                    .progressViewStyle(CircularProgressViewStyle())
+                    .frame(width: 40, height: 40)
+                    .padding()
+                Text("Loading...")
+            }
         }
     }
 }
