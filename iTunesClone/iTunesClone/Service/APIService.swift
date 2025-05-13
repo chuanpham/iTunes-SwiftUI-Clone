@@ -54,6 +54,20 @@ class APIService {
         
     }
     
+    func fetchTopBooks(type: TopBooksEntityType, completion: @escaping (Result<TopBooks, APIError>) -> Void) {
+        
+        let url = topBooksURL(path: type)
+        fetch(type: TopBooks.self, url: url, completion: completion)
+        
+    }
+    
+    func fetchTopAudioBooks(completion: @escaping (Result<TopAudioBooks, APIError>) -> Void) {
+        
+        let url = topAudioBooksURL()
+        fetch(type: TopAudioBooks.self, url: url, completion: completion)
+        
+    }
+    
     func fetchTopPodcasts(type: TopPodcastsEntityType, completion: @escaping (Result<TopPodcasts, APIError>) -> Void) {
         
         let url = topPodcastsURL(path: type)
@@ -159,6 +173,20 @@ class APIService {
     
     private func topPodcastsURL(path: TopPodcastsEntityType) -> URL? {
         let baseUrl = "\(rssBaseURL)/podcasts/\(path.path)/10/podcasts.json"
+        
+        let components = URLComponents(string: baseUrl)
+        return components?.url
+    }
+    
+    private func topBooksURL(path: TopBooksEntityType) -> URL? {
+        let baseUrl = "\(rssBaseURL)/books/\(path.path)/10/books.json"
+        
+        let components = URLComponents(string: baseUrl)
+        return components?.url
+    }
+    
+    private func topAudioBooksURL() -> URL? {
+        let baseUrl = "\(rssBaseURL)/audio-books/top/25/audio-books.json"
         
         let components = URLComponents(string: baseUrl)
         return components?.url

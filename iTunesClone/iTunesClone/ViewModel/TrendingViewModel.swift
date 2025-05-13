@@ -81,3 +81,53 @@ class TopPodcastsViewModel: ObservableObject {
         }
     }
 }
+
+class TopBooksViewModel: ObservableObject {
+    @Published var topBooks: TopBooks? = nil
+    
+    @Published var type: TopBooksEntityType = .topFree
+    
+    @Published var state: FetchState = .start
+    
+    let service = APIService()
+    
+    func fetchTopBooks() {
+        state = .isLoading
+        
+        service.fetchTopBooks(type: type) { [weak self] result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let results):
+                    self?.topBooks = results
+                    self?.state = .loadedAll
+                case .failure(let error):
+                    self?.state = .error(error.localizedDescription)
+                }
+            }
+        }
+    }
+}
+
+class TopAudioBooksViewModel: ObservableObject {
+    @Published var topAudioBooks: TopAudioBooks? = nil
+    
+    @Published var state: FetchState = .start
+    
+    let service = APIService()
+    
+    func fetchTopAudioBooks() {
+        state = .isLoading
+        
+        service.fetchTopAudioBooks { [weak self] result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let results):
+                    self?.topAudioBooks = results
+                    self?.state = .loadedAll
+                case .failure(let error):
+                    self?.state = .error(error.localizedDescription)
+                }
+            }
+        }
+    }
+}

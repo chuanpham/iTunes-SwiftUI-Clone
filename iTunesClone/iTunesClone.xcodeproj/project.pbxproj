@@ -49,6 +49,9 @@
 		83FC808E2DD1AD1A009137B3 /* TrendingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FC808D2DD1AD1A009137B3 /* TrendingViewModel.swift */; };
 		83FC80932DD1E7B4009137B3 /* TopApps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FC80922DD1E7B4009137B3 /* TopApps.swift */; };
 		83FC80952DD1F30A009137B3 /* TopPodcasts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FC80942DD1F30A009137B3 /* TopPodcasts.swift */; };
+		83FC80972DD20B19009137B3 /* TopBooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FC80962DD20B19009137B3 /* TopBooks.swift */; };
+		83FC809B2DD306FA009137B3 /* TopAudioBooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FC809A2DD306FA009137B3 /* TopAudioBooks.swift */; };
+		83FC80A02DD34C71009137B3 /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FC809F2DD34C71009137B3 /* SafariView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -95,6 +98,9 @@
 		83FC808D2DD1AD1A009137B3 /* TrendingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingViewModel.swift; sourceTree = "<group>"; };
 		83FC80922DD1E7B4009137B3 /* TopApps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopApps.swift; sourceTree = "<group>"; };
 		83FC80942DD1F30A009137B3 /* TopPodcasts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopPodcasts.swift; sourceTree = "<group>"; };
+		83FC80962DD20B19009137B3 /* TopBooks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBooks.swift; sourceTree = "<group>"; };
+		83FC809A2DD306FA009137B3 /* TopAudioBooks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopAudioBooks.swift; sourceTree = "<group>"; };
+		83FC809F2DD34C71009137B3 /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -131,6 +137,7 @@
 		0ACCCFCA2B654B6A00EC2473 /* iTunesClone */ = {
 			isa = PBXGroup;
 			children = (
+				83FC809E2DD34C57009137B3 /* Components */,
 				0ACCCFCF2B654B6C00EC2473 /* Assets.xcassets */,
 				0ACCCFCB2B654B6A00EC2473 /* iTunesCloneApp.swift */,
 				0ACCCFCD2B654B6A00EC2473 /* ContentView.swift */,
@@ -189,6 +196,8 @@
 				0ACCD00A2B6E636100EC2473 /* EntityType.swift */,
 				83FC80922DD1E7B4009137B3 /* TopApps.swift */,
 				83FC80942DD1F30A009137B3 /* TopPodcasts.swift */,
+				83FC80962DD20B19009137B3 /* TopBooks.swift */,
+				83FC809A2DD306FA009137B3 /* TopAudioBooks.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -264,6 +273,14 @@
 				0ACCD0162B6EF55C00EC2473 /* BuyButtonStyle.swift */,
 			);
 			path = Styling;
+			sourceTree = "<group>";
+		};
+		83FC809E2DD34C57009137B3 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				83FC809F2DD34C71009137B3 /* SafariView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -350,8 +367,10 @@
 				0ACCD0032B6C38D100EC2473 /* MovieSearchView.swift in Sources */,
 				0ACCCFE72B66A7BD00EC2473 /* AlbumSearchView.swift in Sources */,
 				0ACCCFFE2B6C378200EC2473 /* MovieListViewModel.swift in Sources */,
+				83FC80A02DD34C71009137B3 /* SafariView.swift in Sources */,
 				0ACCD0052B6C399700EC2473 /* MovieListView.swift in Sources */,
 				0ACCD0212B717CD600EC2473 /* MovieSectionView.swift in Sources */,
+				83FC809B2DD306FA009137B3 /* TopAudioBooks.swift in Sources */,
 				83FC80932DD1E7B4009137B3 /* TopApps.swift in Sources */,
 				0ACCD02B2B74345D00EC2473 /* AlbumDetailSongListView.swift in Sources */,
 				0ACCD00B2B6E636100EC2473 /* EntityType.swift in Sources */,
@@ -364,6 +383,7 @@
 				0ACCCFE92B66AA2200EC2473 /* SearchPlaceholderView.swift in Sources */,
 				0ACCD0112B6EF47D00EC2473 /* SongRowView.swift in Sources */,
 				0ACCD00D2B6E66A800EC2473 /* SearchAllListView.swift in Sources */,
+				83FC80972DD20B19009137B3 /* TopBooks.swift in Sources */,
 				0ACCD0172B6EF55C00EC2473 /* BuyButtonStyle.swift in Sources */,
 				0ACCCFCC2B654B6A00EC2473 /* iTunesCloneApp.swift in Sources */,
 				0ACCCFDD2B654BD000EC2473 /* Album.swift in Sources */,

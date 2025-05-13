@@ -111,3 +111,30 @@ enum TopPodcastsEntityType: String, Identifiable, CaseIterable, Equatable {
         }
     }
 }
+
+enum TopBooksEntityType: String, Identifiable, CaseIterable, Equatable {
+    case topFree
+    case topPaid
+    
+    var id: String {
+        return self.rawValue
+    }
+    
+    var name: String {
+        switch self {
+        case .topFree:
+            return "Top Free"
+        case .topPaid:
+            return "Top Paid"
+        }
+    }
+    
+    var path: String {
+        switch self {
+        case .topFree:
+            return "top-free"
+        case .topPaid:
+            return "top-paid"
+        }
+    }
+}
